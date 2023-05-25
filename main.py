@@ -20,4 +20,11 @@
 import pandas
 
 data = pandas.read_csv("weather_data.csv")
-print(data["temp"])
+temp_list = data["temp"].to_list()
+
+# data discovery phase of EDA
+avg_temp = round(data["temp"].mean(), 2)
+print("The average temperature is: ", avg_temp)
+
+max_temp = data["temp"].max()
+print("The max temperature is: ", max_temp)
